@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OGRVRTDataSource>
+    <OGRVRTLayer name="covid">
+        <SrcDataSource relativeToVRT="1">covid.csv</SrcDataSource>
+        <!--Header=False-->
+        <SrcLayer>covid</SrcLayer>
+        <Field name="field_1" src="field_1" type="String"/>
+        <Field name="Country" src="Country" type="String"/>
+        <Field name="TotalCovid" src="TotalCovid" type="Integer"/>
+        <Field name="TotalPop" src="TotalPop" type="Integer"/>
+        <Field name="%Covid/Pop" src="%Covid/Pop" type="Real"/>
+        <GeometryType>wkbPoint</GeometryType>
+        <LayerSRS>EPSG:4326</LayerSRS>
+        <GeometryField encoding="PointFromColumns" x="Long" y="Lat"/>
+    </OGRVRTLayer>
+</OGRVRTDataSource>
